@@ -14,8 +14,17 @@ body {
     margin: 0;
     line-height: 1.5;
   }
-   
 
+main {    
+    container-type:inline-size ;   
+    container-name:column;  
+  }
+
+@container column (min-width: 500px) {
+      .flex-container { display:flex; 
+                           }
+  }
+   
 header  a {
     font-size: 24px;
     color:var(--color-text-secondary);
