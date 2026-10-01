@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <title>Vertio selausnäkymä</title>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="style_vertio.css">
+</head>
+    <body class="bg-surface font-body-default text-on-surface antialiased flex flex-col min-h-screen">
+
+        <header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(75,0,144,0.06)] pt-safe">
+            <div class="h-16 px-margin flex items-center justify-between gap-space-sm">
+                <div class="flex items-center gap-space-xs min-w-0 flex-1">
+                    <img alt="Vertio Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_48A3pM-18Gg9CRfAnSWavmt4SQ9Wfd6i9Ea2N6kDm-T12NJUl-Y7mjd44lr0ypGCjMH0W4FGCVHBnbZyMsWkclEu33KLYdNarxnqWbwmLazC_T-YozzYXp-LAKCQRblRzzUW6tQOYyn2nk3p7bMQ2EEodESUJABkdp6FHfLM9ZjVMeU0dt3wQIW3tLcfD6v_eKdW99NGLl6cTI6JjGgXYzLtCSuFNxwOQoX2I5B1q6RYGZSUn71nfB7M9LX1Xj3d">
+                    <h1 class="font-headline-h3 text-headline-h3 text-on-surface truncate ml-1"><a href="etusivu.html">Vertio</a></h1>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex flex-col flex-1 relative w-full pt-16 pb-24 bg-surface px-margin">
+            <div class="flex flex-col w-full pb-6">
+                <!-- Title & Intro Section -->
+                <header class="flex flex-col gap-1 mb-4">
+                    <h1 class="font-headline-h1 text-headline-h1 text-primary-container leading-tight mt-1">Selaa kursseja</h1>
+                    <p class="font-body-default text-body-default text-on-surface-variant">
+                    Löydä vertaiskokemuksia ja käytännön vinkkejä opintojaksoista.</p>
+                </header>
+
+                <!-- Interactive Search Input Bar -->
+                <div class="relative flex items-center gap-2 mb-3">
+                    <div class="relative flex-1 flex items-center bg-surface-container-lowest rounded-xl shadow-sm">
+                        <span class="material-symbols-outlined absolute left-3 text-primary-container text-[20px] pointer-events-none">search</span>
+                        <input aria-label="Hae kursseja" class="w-full pl-10 pr-9 py-3 bg-transparent text-on-surface font-body-default text-body-default outline-none rounded-xl placeholder:text-outline" id="course-search-input" placeholder="Hae kurssin nimellä, koodilla tai aiheella..." type="text">
+                        <button aria-label="Tyhjennä haku" class="absolute right-2.5 w-6 h-6 flex items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant hover:bg-surface-variant transition-colors" id="clear-search-btn" type="button">
+                        <span class="material-symbols-outlined text-[15px]">close</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course Cards List -->
+                <div class="flex flex-col gap-2">
+                    <article class="course-card p-3.5">
+                        <div class="flex items-start justify-between gap-2 mb-1.5">
+                            <div class="flex flex-col min-w-0 flex-1">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/80 text-primary font-badge-label text-badge-label uppercase">DIGI204 · 5 op</span>
+                                    <span class="font-label-caption text-label-caption text-on-surface-variant truncate">Kevät 2025</span>
+                                </div>
+                                <h2 class="font-headline-h3 text-[16px] font-semibold text-on-surface leading-snug truncate">Käyttäjäkokemus &amp; UI/UX -suunnittelu</h2>
+                            </div>
+                            <div class="course-rating">
+                                <span class="material-symbols-outlined text-[14px] icon-filled">star</span>
+                                <span class="font-bold">4.9</span>
+                                <span class="font-label-caption text-label-caption opacity-80">(31)</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between gap-2 pt-1 border-t border-primary/10">
+                            <div class="flex items-center gap-1.5 flex-wrap min-w-0">
+                                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-lowest/70 text-secondary font-label-caption-bold text-label-caption-bold">
+                                    <span class="material-symbols-outlined text-[13px] icon-filled">thumb_up</span>97% suosittelee</span>
+                                    <span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/60 text-on-surface-variant font-label-caption text-label-caption">#UIUX</span>
+                                    <span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/60 text-on-surface-variant font-label-caption text-label-caption">#Figma</span>
+                            </div>
+                            <a href="sisalto.html"
+                            class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-caption-bold text-label-caption-bold shadow-xs active:scale-95 flex-shrink-0 transition-all">
+                                <span>Tiedot</span>
+                                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="course-card p-3.5">
+                        <div class="flex items-start justify-between gap-2 mb-1.5">
+                            <div class="flex flex-col min-w-0 flex-1">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/80 text-primary font-badge-label text-badge-label uppercase">SOFT102 · 5 op</span><span class="font-label-caption text-label-caption text-on-surface-variant truncate">Jatkuva</span>
+                                </div>
+                                <h2 class="font-headline-h3 text-[16px] font-semibold text-on-surface leading-snug truncate">Frontend-ohjelmointi ja React</h2>
+                            </div>
+                            <div class="course-rating">
+                                <span class="material-symbols-outlined text-[14px] icon-filled">star</span>
+                                <span class="font-bold">4.7</span>
+                                <span class="font-label-caption text-label-caption opacity-80">(64)</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between gap-2 pt-1 border-t border-primary/10">
+                            <div class="flex items-center gap-1.5 flex-wrap min-w-0">
+                                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-lowest/70 text-secondary font-label-caption-bold text-label-caption-bold">
+                                <span class="material-symbols-outlined text-[13px] icon-filled">thumb_up</span>94% suosittelee</span>
+                                <span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/60 text-on-surface-variant font-label-caption text-label-caption">#React</span>
+                                <span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/60 text-on-surface-variant font-label-caption text-label-caption">#TypeScript</span>
+                            </div>
+                            <button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-caption-bold text-label-caption-bold shadow-xs active:scale-95 flex-shrink-0 transition-all" type="button">
+                                <span class="">Tiedot</span>
+                                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="course-card p-3.5">
+                        <div class="flex items-start justify-between gap-2 mb-1.5">
+                            <div class="flex flex-col min-w-0 flex-1">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/80 text-primary font-badge-label text-badge-label uppercase">SOFT208 · 5 op</span>
+                                    <span class="font-label-caption text-label-caption text-on-surface-variant truncate">Syksy 2024</span>
+                                </div>
+                                <h2 class="font-headline-h3 text-[16px] font-semibold text-on-surface leading-snug truncate">Mobiilisovelluskehitys</h2>
+                            </div>
+                            <div class="course-rating">
+                                <span class="material-symbols-outlined text-[14px] icon-filled">star</span>
+                                <span class="font-bold">4.5</span>
+                                <span class="font-label-caption text-label-caption opacity-80">(28)</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between gap-2 pt-1 border-t border-primary/10">
+                            <div class="flex items-center gap-1.5 flex-wrap min-w-0">
+                                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-lowest/70 text-secondary font-label-caption-bold text-label-caption-bold">
+                                    <span class="material-symbols-outlined text-[13px] icon-filled">thumb_up</span>89% suosittelee</span>
+                                    <span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/60 text-on-surface-variant font-label-caption text-label-caption">#Flutter</span>
+                                    <span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/60 text-on-surface-variant font-label-caption text-label-caption">#Mobiili</span>
+                            </div>
+                            <button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-caption-bold text-label-caption-bold shadow-xs active:scale-95 flex-shrink-0 transition-all" type="button">
+                                <span class="">Tiedot</span>
+                                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+       <nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(75,0,144,0.05)]" data-active-classes="text-primary font-body-medium">
+            <div class="grid grid-cols-4 items-center h-16 px-space-xs">
+                <a class="flex flex-col items-center justify-center gap-0.5 h-full text-on-surface-variant transition-colors" data-path="koti" href="etusivu.html">
+                    <span class="material-symbols-outlined text-[22px]">home</span>
+                    <span class="font-label-caption text-label-caption text-center truncate w-full px-1">Koti</span>
+                </a>
+                <a class="flex flex-col items-center justify-center gap-0.5 h-full text-on-surface-variant transition-colors" data-path="haku-selaus" href="selaus.html">
+                    <span class="material-symbols-outlined text-[22px]">search</span>
+                    <span class="font-label-caption text-label-caption text-center truncate w-full px-1">Haku &amp; Selaus</span>
+                </a>
+            </div>
+        </nav>
+
+    </body>
+</html>

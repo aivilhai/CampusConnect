@@ -1,0 +1,99 @@
+
+:root {
+--color-primary:rgb(0,121,194);   /*HH Blue */
+--color-background:rgb(255,255,255);/* valkoinen */
+--color-surface:rgb(230,230,230);   /* harmaa*/
+--color-text:rgb(0,0,0); /* musta */
+--color-text-secondary:rgb(255,255,255); /*valkoinen*/
+  }
+
+body {
+    color:var(--color-text);
+    background:var(--color-background);
+    font-family: 'Roboto',sans-serif;
+    margin: 0;
+    line-height: 1.5;
+  }
+   
+
+header  a {
+    font-size: 24px;
+    color:var(--color-text-secondary);
+    background: var(--color-primary);
+    display: block;
+    font-weight: bolder;
+    text-decoration: none;
+    margin:0;
+    padding: 12px 18px;
+  }
+
+h1 {
+    color:var(--color-primary);
+}
+
+h1 img {
+    width: 50px; 
+    vertical-align: middle;
+  }
+h2 {
+  margin: 12px;
+}
+
+p {
+  margin: 12px;
+}
+
+ul {
+  list-style: square;
+}
+
+.coloraccent {
+  color:var(--color-primary);
+  font-weight: bolder;
+}
+
+.quote {
+    border-left:var(--color-primary) solid 5px;
+    padding: 5px 0 5px 20px;
+    font-style: italic;
+  }
+    
+
+.logo {
+    display:block; 
+    width: 300px;
+    height: 300px;
+    border: 2px solid var(--color-primary);
+    border-radius:10px;
+  }
+
+main { 
+    margin: 0;
+  }
+
+.ingressi {
+  font-weight: bolder;
+}
+
+#kuvaLista {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--color-primary);
+  padding: 20px;
+  color: var(--color-text-secondary);
+  height:auto
+}
+
+.lista {
+  display: block;
+  padding: 0;
+}
+
+.otsikko {
+  display: block;
+  background: var(--color-surface);
+  color: var(--color-text);
+  padding: 12px 18px;
+}
+

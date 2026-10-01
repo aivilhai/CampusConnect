@@ -1,0 +1,232 @@
+/* Vertio shared styles */
+
+@layer base {
+  html,
+  body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+
+  body {
+    overscroll-behavior: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Shared design tokens retained from the original Tailwind configuration. */
+:root {
+  --color-primary: #2f005e;
+  --color-tertiary: #2a1e00;
+  --color-on-primary-fixed-variant: #5e23a3;
+  --color-secondary-container: #163cff;
+  --color-on-background: #1a1c1c;
+  --color-tertiary-fixed-dim: #edc155;
+  --color-on-surface-variant: #4b4452;
+  --color-on-surface: #1a1c1c;
+  --color-surface-container-low: #f3f3f3;
+  --color-on-tertiary: #ffffff;
+  --color-secondary: #0028cc;
+  --color-on-secondary-fixed: #000d5f;
+  --color-surface-container: #eeeeee;
+  --color-surface-variant: #e2e2e2;
+  --color-surface-bright: #f9f9f9;
+  --color-on-primary: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-inverse-primary: #d8b9ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-highest: #e2e2e2;
+  --color-background: #f9f9f9;
+  --color-primary-container: #4b0090;
+  --color-primary-fixed: #eedcff;
+  --color-on-error: #ffffff;
+  --color-on-secondary-container: #cdd2ff;
+  --color-outline: #7c7484;
+  --color-primary-fixed-dim: #d8b9ff;
+  --color-surface-container-high: #e8e8e8;
+  --color-tertiary-fixed: #ffdf9a;
+  --color-on-primary-fixed: #290054;
+  --color-on-tertiary-container: #c0982f;
+  --color-surface: #f9f9f9;
+  --color-on-tertiary-fixed: #251a00;
+  --color-on-secondary-fixed-variant: #0029d2;
+}
+
+.material-symbols-outlined.icon-filled {
+  font-variation-settings: "FILL" 1;
+}
+
+/* Reusable styles replacing repeated inline declarations. */
+.course-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.75rem;
+  background: #c2feea;
+  color: var(--color-on-surface);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: transform 150ms ease;
+}
+
+.course-card:active {
+  transform: scale(0.99);
+}
+
+.course-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  background: #ffd163;
+  color: var(--color-on-tertiary-fixed);
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 700;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+
+.metric-track {
+  width: 100%;
+  height: 0.625rem;
+  overflow: hidden;
+  display: flex;
+  border-radius: 9999px;
+  background: var(--color-surface-container-high);
+}
+
+.metric-fill {
+  height: 100%;
+  border-radius: 9999px;
+}
+
+.metric-fill--secondary {
+  background: var(--color-secondary-container);
+}
+
+.metric-fill--primary {
+  background: var(--color-primary-container);
+}
+
+/* Custom utility classes from the original Tailwind theme.
+   These are kept here so the HTML no longer needs an inline Tailwind configuration. */
+
+.bg-surface { background-color: #f9f9f9; }
+.bg-surface\/85 { background-color: rgba(249, 249, 249, 0.85); }
+.bg-surface-container-lowest { background-color: #ffffff; }
+.bg-surface-container-lowest\/90 { background-color: rgba(255, 255, 255, 0.9); }
+.bg-surface-container-low { background-color: #f3f3f3; }
+.bg-surface-container-high { background-color: #e8e8e8; }
+.bg-surface-container-highest { background-color: #e2e2e2; }
+.bg-surface-container { background-color: #eeeeee; }
+.bg-surface-variant { background-color: #e2e2e2; }
+.bg-primary { background-color: #2f005e; }
+.bg-primary-container { background-color: #4b0090; }
+.bg-primary-fixed { background-color: #eedcff; }
+.bg-primary-fixed\/40 { background-color: rgba(238, 220, 255, 0.4); }
+.bg-secondary { background-color: #0028cc; }
+.bg-secondary-container { background-color: #163cff; }
+.bg-tertiary-fixed { background-color: #ffdf9a; }
+.bg-tertiary-fixed\/60 { background-color: rgba(255, 223, 154, 0.6); }
+
+.text-primary { color: #2f005e; }
+.text-primary-container { color: #4b0090; }
+.text-secondary { color: #0028cc; }
+.text-tertiary { color: #2a1e00; }
+.text-on-primary { color: #ffffff; }
+.text-on-surface { color: #1a1c1c; }
+.text-on-surface-variant { color: #4b4452; }
+.text-on-background { color: #1a1c1c; }
+.text-on-primary-fixed { color: #290054; }
+.text-on-tertiary-fixed { color: #251a00; }
+.text-outline { color: #7c7484; }
+
+.border-primary\/10 { border-color: rgba(47, 0, 94, 0.1); }
+
+.font-body-default,
+.font-label-caption,
+.font-label-caption-bold,
+.font-badge-label,
+.font-headline-h1,
+.font-headline-h2,
+.font-headline-h3,
+.font-body-medium {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.font-body-default { font-size: 14px; line-height: 20px; font-weight: 400; letter-spacing: 0; }
+.font-body-medium { font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0; }
+.font-label-caption { font-size: 12px; line-height: 16px; font-weight: 400; letter-spacing: 0.01em; }
+.font-label-caption-bold { font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.02em; }
+.font-badge-label { font-size: 11px; line-height: 14px; font-weight: 700; letter-spacing: 0.04em; }
+.font-headline-h3 { font-size: 18px; line-height: 24px; font-weight: 600; letter-spacing: 0; }
+.font-headline-h1 { font-size: 28px; line-height: 34px; font-weight: 700; letter-spacing: -0.02em; }
+.font-headline-h2 { font-size: 22px; line-height: 28px; font-weight: 600; letter-spacing: -0.01em; }
+
+.px-margin { padding-left: 1rem; padding-right: 1rem; }
+.px-space-xs { padding-left: 0.25rem; padding-right: 0.25rem; }
+.gap-space-xs { gap: 0.25rem; }
+.gap-space-sm { gap: 0.5rem; }
+.gap-space-md { gap: 1rem; }
+.gap-space-lg { gap: 1.5rem; }
+.gap-space-xl { gap: 2rem; }
+
+.shadow-\[0_1px_8px_rgba\(75\,0\,144\,0\.06\)\] {
+  box-shadow: 0 1px 8px rgba(75, 0, 144, 0.06);
+}
+.shadow-\[0_-2px_12px_rgba\(75\,0\,144\,0\.05\)\] {
+  box-shadow: 0 -2px 12px rgba(75, 0, 144, 0.05);
+}
+
+.bg-transparent { background-color: transparent; }
+.bg-surface-container-lowest\/80 { background-color: rgba(255,255,255,0.8); }
+.bg-surface-container-lowest\/70 { background-color: rgba(255,255,255,0.7); }
+.bg-surface-container-lowest\/60 { background-color: rgba(255,255,255,0.6); }
+.bg-surface-container-low\/60 { background-color: rgba(243,243,243,0.6); }
+
+.backdrop-blur-xl { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+
+.text-\[16px\] { font-size: 16px; }
+.text-\[15px\] { font-size: 15px; }
+.text-\[14px\] { font-size: 14px; }
+.text-\[13px\] { font-size: 13px; }
+.text-\[22px\] { font-size: 22px; }
+.text-\[20px\] { font-size: 20px; }
+.text-\[18px\] { font-size: 18px; }
+.text-\[11px\] { font-size: 11px; }
+
+.leading-tight { line-height: 1.25; }
+.leading-snug { line-height: 1.375; }
+
+.hover\:opacity-80:hover { opacity: 0.8; }
+.hover\:bg-surface-variant:hover { background-color: #e2e2e2; }
+.transition-colors { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-duration: 150ms; }
+.transition-opacity { transition-property: opacity; transition-duration: 150ms; }
+.transition-all { transition-property: all; transition-duration: 150ms; }
+.transition-transform { transition-property: transform; transition-duration: 150ms; }
+.active\:scale-95:active { transform: scale(0.95); }
+
+.shadow-xs { box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); }
+
