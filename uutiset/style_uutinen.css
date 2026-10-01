@@ -84,14 +84,19 @@ main {
   font-weight: bolder;
 }
 
-#kuvaLista {
+.flex-container {
+  min-height: 340px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border: 2px solid black;
+  flex-wrap: wrap;
+}
+
+#kuvaLista {
   background: var(--color-primary);
   padding: 20px;
   color: var(--color-text-secondary);
-  height:auto
 }
 
 .lista {
